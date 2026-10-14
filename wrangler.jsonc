@@ -1,0 +1,52 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "stafford-portal",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-13",
+
+  // The browser app in ./public is served as static assets. Only /api/* runs the Worker first.
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "not_found_handling": "single-page-application",
+    "run_worker_first": ["/api/*"]
+  },
+
+  // Accounts, letters, templates, users and the change history.
+  // Create it with `npx wrangler d1 create stafford-portal` and paste the database_id here.
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "stafford-portal",
+      "database_id": "00000000-0000-0000-0000-000000000000",
+      "migrations_dir": "migrations"
+    }
+  ],
+
+  // Ledger attachments (ledgers/...) and nightly backups (backups/...).
+  // Create it with `npx wrangler r2 bucket create stafford-portal-files`.
+  "r2_buckets": [
+    { "binding": "FILES", "bucket_name": "stafford-portal-files" }
+  ],
+
+  // Nightly backup to R2, 10:00 UTC (3 a.m. Pacific in summer, 2 a.m. in winter).
+  "triggers": { "crons": ["0 10 * * *"] },
+
+  "vars": {
+    // Cloudflare Access: your team domain and the Application Audience (AUD) tag.
+    "ACCESS_TEAM_DOMAIN": "https://YOUR-TEAM.cloudflareaccess.com",
+    "ACCESS_AUD": "",
+    // Comma-separated emails that become admins on their first sign-in.
+    "BOOTSTRAP_ADMINS": "",
+    // Used to decide what "today" is for date checks.
+    "TIMEZONE": "America/Los_Angeles",
+    "BACKUP_RETENTION_DAYS": "90",
+    "MAX_UPLOAD_MB": "25"
+  },
+
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "traces": { "enabled": true }
+  }
+}

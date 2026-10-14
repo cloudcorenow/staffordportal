@@ -1,0 +1,20 @@
+{
+  "name": "stafford-portal",
+  "version": "1.0.0",
+  "description": "Stafford Account and Letter Portal on Cloudflare Workers, D1 and R2",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "types": "wrangler types",
+    "typecheck": "tsc -p .",
+    "db:migrate:local": "wrangler d1 migrations apply stafford-portal --local",
+    "db:migrate:remote": "wrangler d1 migrations apply stafford-portal --remote",
+    "test:e2e": "python3 test/e2e.py",
+    "postinstall": "wrangler types"
+  },
+  "devDependencies": {
+    "typescript": "7.0.2",
+    "wrangler": "4.150.0"
+  },
+  "private": true
+}

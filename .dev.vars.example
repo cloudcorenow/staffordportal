@@ -1,0 +1,4 @@
+# Copy to .dev.vars for local development only. Never deploy these values.
+# With ACCESS_AUD empty, requests from localhost are signed in as this email.
+DEV_USER_EMAIL=you@example.com
+BOOTSTRAP_ADMINS=you@example.com

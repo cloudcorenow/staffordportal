@@ -1,0 +1,50 @@
+.letter-set{display:flex;flex-direction:column;gap:18px;align-items:center;overflow-x:auto;padding-bottom:4px}
+.sheet img{max-width:none}
+.sheet,.sheet *{box-sizing:border-box}
+.sheet{flex:none;width:8.5in;height:11in;background:#fff;color:#000;border:1px solid #D4D4D0;position:relative;overflow:hidden;font-family:Calibri,Carlito,"Segoe UI",Arial,sans-serif;font-size:9.5pt;line-height:1.3;padding:0.75in 0.6in 0.35in}
+.sheet[data-mark]::after{content:attr(data-mark);position:absolute;top:14px;right:18px;font:700 8pt Arial,sans-serif;color:#A3302B;border:1.5px solid #A3302B;padding:1px 7px;border-radius:3px}
+.sheet a{color:#0563C1}
+.sheet p{margin:0}
+.sheet h4{margin:0 0 4px;font-size:9.5pt;font-weight:700;border-bottom:2.5px solid #000;padding-bottom:2px}
+.sheet ul{margin:0 0 8px;padding-left:15px}
+.sheet li{margin-bottom:2px}
+.s-cover .cover-addr{position:absolute;top:2.1in;left:1.6in;font-family:"Times New Roman",Times,serif;font-size:11pt;line-height:1.3}
+.n-top{display:grid;grid-template-columns:1fr 1fr;gap:0.3in;font-size:10pt}
+.n-logo{width:2.05in;height:auto;display:block;margin-bottom:4px}
+.n-to{padding-top:6px}
+.n-to .to-row{display:grid;grid-template-columns:auto 1fr;gap:14px}
+.n-ref{text-align:right;margin-top:12px}
+.n-intro{font-family:"Times New Roman",Times,serif;font-size:11pt;margin:14px 0 12px !important;line-height:1.25}
+.n-cols{display:grid;grid-template-columns:1fr 1fr;gap:0.3in}
+.n-acct{margin:2px 0 16px !important}
+.n-tbl{width:100%;border-collapse:collapse}
+.n-tbl td{padding:3px 2px;border-bottom:1px solid #000;vertical-align:top}
+.n-tbl tr.owed td{border-top:1px solid #000;font-size:10.5pt}
+.n-tbl td.amt{text-align:right;width:78px}
+.n-tbl td.op,.n-tbl td.cur{width:14px;text-align:center}
+.n-tbl tr.sub td{border-bottom:none;font-size:8.5pt;padding-bottom:0}
+.n-tbl tr.total td{background:#D9D9D9;font-size:10.5pt;padding:8px 3px;border-bottom:2px solid #000;vertical-align:middle}
+.n-right h4+ul{margin-bottom:10px}
+.cut{border-top:1.5px dashed #000;margin:12px -0.2in 12px;position:relative}
+.cut span{position:absolute;left:0.25in;top:-0.8em;background:#fff;padding:0 4px;font-size:13pt;line-height:1}
+.n-form{display:grid;grid-template-columns:1fr 1fr;gap:0.3in}
+.n-mail{font-size:10pt}
+.n-mail .mail-h{display:block;font-size:11pt;margin:18px 0 8px}
+.n-debtor{margin-top:26px !important}
+.n-pay{font-family:"Times New Roman",Times,serif;margin-top:18px !important}
+.n-lic{font-family:"Times New Roman",Times,serif;margin-top:12px !important}
+.chk-h{margin-bottom:2px !important}
+ul.chk{list-style:none;padding-left:0;margin:0}
+ul.chk ul.chk{padding-left:18px;margin-top:2px}
+ul.chk li{position:relative;padding-left:16px}
+ul.chk li::before{content:"";position:absolute;left:0;top:.2em;width:9px;height:9px;border:1px solid #000}
+.chk-note{margin:2px 0 4px -16px}
+.blank{display:inline-block;min-width:80px;border-bottom:1px solid #000;margin-left:6px}
+.s-disc{font-size:9.5pt}
+.s-disc h3{text-align:center;font-size:10pt;margin:0 0 14px}
+.s-disc p{text-align:justify;text-indent:.4in;margin:0 0 12px !important}
+.sheet.s-text{height:auto;min-height:11in;font-family:"Libre Caslon Text",Georgia,"Times New Roman",serif;font-size:11.5pt;line-height:1.55;padding:0.85in 0.95in;-webkit-box-decoration-break:clone;box-decoration-break:clone}
+.s-text .lh{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:end;border-bottom:1.5px solid #325E81;padding-bottom:12px;margin-bottom:30px;font-family:Calibri,Carlito,"Segoe UI",Arial,sans-serif;font-size:9.5pt;line-height:1.4;color:#222}
+.s-text .lh img{width:2.1in;height:auto}
+.s-text .lh .lh-lines{text-align:right}
+.s-text p{margin:0 0 11pt}
