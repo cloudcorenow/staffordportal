@@ -18,7 +18,7 @@
     {
       "binding": "DB",
       "database_name": "stafford-portal",
-      "database_id": "00000000-0000-0000-0000-000000000000",
+      "database_id": "28dede1c-61f3-461e-b1c5-716070fd7a29",
       "migrations_dir": "migrations"
     }
   ],
@@ -26,7 +26,7 @@
   // Ledger attachments (ledgers/...) and nightly backups (backups/...).
   // Create it with `npx wrangler r2 bucket create stafford-portal-files`.
   "r2_buckets": [
-    { "binding": "FILES", "bucket_name": "stafford-portal-files" }
+    { "binding": "FILES", "bucket_name": "staffordportal" }
   ],
 
   // Nightly backup to R2, 10:00 UTC (3 a.m. Pacific in summer, 2 a.m. in winter).
