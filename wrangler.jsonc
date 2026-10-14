@@ -34,10 +34,10 @@
 
   "vars": {
     // Cloudflare Access: your team domain and the Application Audience (AUD) tag.
-    "ACCESS_TEAM_DOMAIN": "https://YOUR-TEAM.cloudflareaccess.com",
-    "ACCESS_AUD": "",
+    "ACCESS_TEAM_DOMAIN": "https://cloudcorenow-pages.cloudflareaccess.com/cdn-cgi/access/certs",
+    "ACCESS_AUD": "72b3b27a388f490e21e83cfc22e8acfe28f96183f889f9f03a7c894693896767",
     // Comma-separated emails that become admins on their first sign-in.
-    "BOOTSTRAP_ADMINS": "",
+    "BOOTSTRAP_ADMINS": "lamado@cloudcorenow.com",
     // Used to decide what "today" is for date checks.
     "TIMEZONE": "America/Los_Angeles",
     "BACKUP_RETENTION_DAYS": "90",
